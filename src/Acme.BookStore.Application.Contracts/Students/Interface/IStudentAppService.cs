@@ -13,6 +13,6 @@ namespace Acme.BookStore.Students.Interface
             CreateUpdateStudentDto
             >
     {
-      
+        public string test();
     }
 }

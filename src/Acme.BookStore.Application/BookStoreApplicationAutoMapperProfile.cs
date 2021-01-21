@@ -1,4 +1,6 @@
-﻿using Acme.BookStore.Students;
+﻿using Acme.BookStore.Authors;
+using Acme.BookStore.Authors.dto;
+using Acme.BookStore.Students;
 using AutoMapper;
 
 namespace Acme.BookStore
@@ -10,6 +12,8 @@ namespace Acme.BookStore
 
             CreateMap<Student, StudentDto>();
             CreateMap<CreateUpdateStudentDto,Student>();
+
+            CreateMap<Author, AuthorDto>();
 
             /* You can configure your AutoMapper mapping configuration here.
              * Alternatively, you can split your mapping configurations

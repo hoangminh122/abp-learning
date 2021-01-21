@@ -2,6 +2,8 @@
 using Acme.BookStore.Users;
 using Volo.Abp.Data;
 using Volo.Abp.MongoDB;
+using Acme.BookStore.Students;
+using Acme.BookStore.Authors;
 
 namespace Acme.BookStore.MongoDB
 {
@@ -9,6 +11,10 @@ namespace Acme.BookStore.MongoDB
     public class BookStoreMongoDbContext : AbpMongoDbContext
     {
         public IMongoCollection<AppUser> Users => Collection<AppUser>();
+        public IMongoCollection<Student> Students => Collection<Student>();
+
+        public IMongoCollection<Author> Authors => Collection<Author>();
+
 
         protected override void CreateModel(IMongoModelBuilder modelBuilder)
         {

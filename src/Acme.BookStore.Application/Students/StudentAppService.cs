@@ -1,4 +1,5 @@
-﻿using Acme.BookStore.Students.Interface;
+﻿using Acme.BookStore.Permissions;
+using Acme.BookStore.Students.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,16 @@ namespace Acme.BookStore.Students
     {
         public StudentAppService(IRepository<Student,Guid> repository):base(repository)
         {
+            GetPolicyName = BookStorePermissions.Students.Default;
+            GetListPolicyName = BookStorePermissions.Students.Default;
+            CreatePolicyName = BookStorePermissions.Students.Create;
+            UpdatePolicyName = BookStorePermissions.Students.Edit;
+            DeletePolicyName = BookStorePermissions.Students.Delete;
+        }
 
+        public string test()
+        {
+            return "Hello Minh";
         }
     }
 }
